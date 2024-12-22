@@ -1,4 +1,3 @@
-import { useTheme } from '@/hooks/useTheme';
 import { SiDiscord, SiGithub, SiGmail, SiSteam, SiX, SiZhihu } from '@icons-pack/react-simple-icons';
 import { Avatar, Button, Card, CardBody, CardFooter, CardHeader, Chip, Link } from '@nextui-org/react';
 import type React from 'react';
@@ -20,7 +19,6 @@ const SocialButton = ({ href, icon }: { href?: string; icon?: React.ReactNode })
 };
 
 export const IntroCard = () => {
-  const { theme, toggleTheme } = useTheme();
   return (
     <Card className='p-4'>
       <CardHeader className='justify-between'>
@@ -38,16 +36,16 @@ export const IntroCard = () => {
       <CardBody className='text-small text-default-500'>
         A Frontend Developer, Competitive Programmer and UI/UX enthusiast from China.
         <div className='flex mt-2 gap-1'>
-          <Chip color='success' size='sm' variant='flat'>
+          <Chip size='sm' variant='flat'>
             14 y.o.
           </Chip>
-          <Chip color='success' size='sm' variant='flat'>
+          <Chip size='sm' variant='flat'>
             He/Him
           </Chip>
-          <Chip color='secondary' size='sm' variant='flat'>
+          <Chip size='sm' variant='flat'>
             ENFP
           </Chip>
-          <Chip color='secondary' size='sm' variant='flat'>
+          <Chip size='sm' variant='flat'>
             ACG Lover
           </Chip>
         </div>
