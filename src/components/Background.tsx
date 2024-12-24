@@ -21,7 +21,7 @@ export const Background = ({ image, position }: BackgroundProps) => {
       <img
         alt='background'
         src={image}
-        className='relative shadow-black/10 opacity-0 data-[loaded=true]:opacity-100 transition-transform-opacity !duration-700'
+        className='relative shadow-black/10 opacity-0 data-[loaded=true]:opacity-100 transition-transform-opacity !duration-1000'
         data-loaded={loaded}
       />
     </div>

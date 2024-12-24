@@ -2,29 +2,22 @@ import {
   SiAdobephotoshop,
   SiArchlinux,
   SiCplusplus,
-  SiFigma,
   SiGit,
-  SiJavascript,
   SiMysql,
   SiPython,
   SiReact,
   SiRust,
   SiTypescript,
-  SiVite,
   SiVuedotjs,
 } from '@icons-pack/react-simple-icons';
-import { Button, Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Card, CardBody, CardHeader, Chip } from '@nextui-org/react';
 import type React from 'react';
 
-const TechIcon = ({
-  color,
-  icon,
-  text,
-}: { color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'; icon?: React.ReactNode; text?: string }) => {
+const TechIcon = ({ icon, text }: { icon?: React.ReactNode; text?: string }) => {
   return (
-    <Button disabled disableRipple startContent={icon} color={color} variant='flat'>
+    <Chip className='pl-2' variant='flat' startContent={icon}>
       {text}
-    </Button>
+    </Chip>
   );
 };
 
@@ -37,19 +30,16 @@ export const TechCard = () => {
 
       <CardBody>
         <div className='flex flex-row flex-wrap gap-2'>
-          <TechIcon color='primary' icon={<SiReact />} text='React' />
-          <TechIcon color='success' icon={<SiVuedotjs />} text='Vue.js' />
-          <TechIcon color='warning' icon={<SiJavascript />} text='Javascript' />
-          <TechIcon color='primary' icon={<SiTypescript />} text='Typescript' />
-          <TechIcon color='secondary' icon={<SiVite />} text='Vite' />
-          <TechIcon color='primary' icon={<SiCplusplus />} text='C++' />
-          <TechIcon color='default' icon={<SiRust />} text='Rust' />
-          <TechIcon color='danger' icon={<SiGit />} text='Git' />
-          <TechIcon color='primary' icon={<SiMysql />} text='MySQL' />
-          <TechIcon color='warning' icon={<SiPython />} text='Python' />
-          <TechIcon color='primary' icon={<SiArchlinux />} text='Arch Linux' />
-          <TechIcon color='primary' icon={<SiAdobephotoshop />} text='Photoshop' />
-          <TechIcon color='default' icon={<SiFigma />} text='Figma' />
+          <TechIcon icon={<SiReact color='default' size={16} />} text='React' />
+          <TechIcon icon={<SiVuedotjs color='default' size={16} />} text='Vue.js' />
+          <TechIcon icon={<SiTypescript color='default' size={16} />} text='Typescript' />
+          <TechIcon icon={<SiCplusplus color='default' size={16} />} text='C++' />
+          <TechIcon icon={<SiRust color='default' size={16} />} text='Rust' />
+          <TechIcon icon={<SiGit color='default' size={16} />} text='Git' />
+          <TechIcon icon={<SiMysql color='default' size={16} />} text='MySQL' />
+          <TechIcon icon={<SiPython color='default' size={16} />} text='Python' />
+          <TechIcon icon={<SiArchlinux color='default' size={16} />} text='Arch Linux' />
+          <TechIcon icon={<SiAdobephotoshop color='default' size={16} />} text='Photoshop' />
         </div>
       </CardBody>
     </Card>
