@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import '@/styles/globals.css';
+import '@/styles/index.css';
 import 'core-js/actual';
 
 import { NextUIProvider } from '@nextui-org/react';

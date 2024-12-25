@@ -1,48 +1,27 @@
-// originally written by @imoaazahmed
-// modified by @hellolin
+import { create } from 'zustand';
 
-import { useEffect, useMemo, useState } from 'react';
+type Theme = 'light' | 'dark';
 
-const ThemeProps = {
-  key: 'theme',
-  light: 'light',
-  dark: 'dark',
-} as const;
-
-type Theme = typeof ThemeProps.light | typeof ThemeProps.dark;
-
-export const useTheme = (defaultTheme?: Theme) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    let storedTheme = localStorage.getItem(ThemeProps.key) as Theme | null;
-    if (!storedTheme) storedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeProps.dark : ThemeProps.light;
-
-    return storedTheme;
-  });
-
-  const isDark = useMemo(() => {
-    return theme === ThemeProps.dark;
-  }, [theme]);
-
-  const isLight = useMemo(() => {
-    return theme === ThemeProps.light;
-  }, [theme]);
-
-  const _setTheme = (theme: Theme) => {
-    localStorage.setItem(ThemeProps.key, theme);
-    document.documentElement.classList.remove(ThemeProps.light, ThemeProps.dark);
-    document.documentElement.classList.add(theme);
-    setTheme(theme);
-  };
-
-  const setLightTheme = () => _setTheme(ThemeProps.light);
-
-  const setDarkTheme = () => _setTheme(ThemeProps.dark);
-
-  const toggleTheme = () => (theme === ThemeProps.dark ? setLightTheme() : setDarkTheme());
-
-  useEffect(() => {
-    _setTheme(theme);
-  });
-
-  return { theme, isDark, isLight, setLightTheme, setDarkTheme, toggleTheme };
+const getDefaultTheme = () => {
+  let stored = localStorage.getItem('theme') as Theme | null;
+  if (!stored) stored = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.classList.add(stored);
+  return stored;
 };
+
+export interface ThemeStore {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
+export const useThemeStore = create<ThemeStore>(set => ({
+  theme: getDefaultTheme(),
+  toggleTheme: () =>
+    set(state => {
+      const newTheme = state.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', newTheme);
+      document.documentElement.classList.remove(state.theme);
+      document.documentElement.classList.add(newTheme);
+      return { theme: newTheme };
+    }),
+}));

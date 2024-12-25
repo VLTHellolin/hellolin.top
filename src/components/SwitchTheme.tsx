@@ -1,8 +1,8 @@
-import { useTheme } from '@/hooks/useTheme';
+import { useThemeStore } from '@/hooks/useTheme';
 import { Button } from '@nextui-org/react';
 
 export const SwitchTheme = () => {
-  const { theme, toggleTheme } = useTheme();
+  const toggleTheme = useThemeStore(e => e.toggleTheme);
 
   return (
     <div className='fixed opacity-80 right-2 top-2'>
