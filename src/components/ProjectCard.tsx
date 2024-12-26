@@ -1,5 +1,5 @@
 import { useThemeStore } from '@/hooks/useTheme';
-import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import GitHubCalendar from 'react-github-calendar';
 
 export const ProjectCard = () => {

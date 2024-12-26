@@ -1,5 +1,5 @@
 import { useThemeStore } from '@/hooks/useTheme';
-import { Button } from '@nextui-org/react';
+import { Button } from '@nextui-org/button';
 
 export const SwitchTheme = () => {
   const toggleTheme = useThemeStore(e => e.toggleTheme);

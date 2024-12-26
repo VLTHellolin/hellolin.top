@@ -1,5 +1,9 @@
 import { SiDiscord, SiGithub, SiGmail, SiSteam, SiX, SiZhihu } from '@icons-pack/react-simple-icons';
-import { Avatar, Button, Card, CardBody, CardFooter, CardHeader, Chip, Link } from '@nextui-org/react';
+import { Avatar } from '@nextui-org/avatar';
+import { Button } from '@nextui-org/button';
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
+import { Chip } from '@nextui-org/chip';
+import { Link } from '@nextui-org/link';
 import type React from 'react';
 
 const LongSocialButton = ({ href, icon, text }: { href?: string; icon?: React.ReactNode; text?: string }) => {

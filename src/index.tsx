@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import '@/styles/index.css';
-import 'core-js/actual';
 
-import { NextUIProvider } from '@nextui-org/react';
+import { NextUIProvider } from '@nextui-org/system';
 import App from './App.tsx';
 
 ReactDOM.createRoot(document.body).render(

@@ -10,7 +10,8 @@ import {
   SiTypescript,
   SiVuedotjs,
 } from '@icons-pack/react-simple-icons';
-import { Card, CardBody, CardHeader, Chip } from '@nextui-org/react';
+import { Card, CardBody, CardHeader } from '@nextui-org/card';
+import { Chip } from '@nextui-org/chip';
 import type React from 'react';
 
 const TechIcon = ({ icon, text }: { icon?: React.ReactNode; text?: string }) => {
