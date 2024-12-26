@@ -1,22 +1,14 @@
-import {
-  SiAdobephotoshop,
-  SiArchlinux,
-  SiCplusplus,
-  SiGit,
-  SiMysql,
-  SiPython,
-  SiReact,
-  SiRust,
-  SiTypescript,
-  SiVuedotjs,
-} from '@icons-pack/react-simple-icons';
+import { Icon } from '@iconify/react';
 import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Chip } from '@nextui-org/chip';
-import type React from 'react';
 
-const TechIcon = ({ icon, text }: { icon?: React.ReactNode; text?: string }) => {
+const SiIcon = ({ icon }: { icon: string }) => {
+  return <embed width={16} height={16} src={`/icons/${icon}.svg`} />;
+};
+
+const TechIcon = ({ icon, color, text }: { icon: string; color: string; text: string }) => {
   return (
-    <Chip className='pl-2' variant='flat' startContent={icon}>
+    <Chip className='pl-2' variant='flat' startContent={<Icon icon={icon} color={color} width={16} />}>
       {text}
     </Chip>
   );
@@ -31,16 +23,16 @@ export const TechCard = () => {
 
       <CardBody>
         <div className='flex flex-row flex-wrap gap-2'>
-          <TechIcon icon={<SiReact color='default' size={16} />} text='React' />
-          <TechIcon icon={<SiVuedotjs color='default' size={16} />} text='Vue.js' />
-          <TechIcon icon={<SiTypescript color='default' size={16} />} text='Typescript' />
-          <TechIcon icon={<SiCplusplus color='default' size={16} />} text='C++' />
-          <TechIcon icon={<SiRust color='default' size={16} />} text='Rust' />
-          <TechIcon icon={<SiGit color='default' size={16} />} text='Git' />
-          <TechIcon icon={<SiMysql color='default' size={16} />} text='MySQL' />
-          <TechIcon icon={<SiPython color='default' size={16} />} text='Python' />
-          <TechIcon icon={<SiArchlinux color='default' size={16} />} text='Arch Linux' />
-          <TechIcon icon={<SiAdobephotoshop color='default' size={16} />} text='Photoshop' />
+          <TechIcon icon='simple-icons:react' color='#61DAFB' text='React' />
+          <TechIcon icon='simple-icons:vuedotjs' color='#4FC08D' text='Vue.js' />
+          <TechIcon icon='simple-icons:typescript' color='#3178C6' text='Typescript' />
+          <TechIcon icon='simple-icons:cplusplus' color='#00599C' text='C++' />
+          <TechIcon icon='simple-icons:rust' color='#000000' text='Rust' />
+          <TechIcon icon='simple-icons:git' color='#F05032' text='Git' />
+          <TechIcon icon='simple-icons:mysql' color='#4479A1' text='MySQL' />
+          <TechIcon icon='simple-icons:python' color='#3776AB' text='Python' />
+          <TechIcon icon='simple-icons:nixos' color='#5277C3' text='NixOS' />
+          <TechIcon icon='simple-icons:archlinux' color='#1793D1' text='Arch Linux' />
         </div>
       </CardBody>
     </Card>

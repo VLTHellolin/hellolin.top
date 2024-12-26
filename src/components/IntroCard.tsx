@@ -1,23 +1,39 @@
-import { SiDiscord, SiGithub, SiGmail, SiSteam, SiX, SiZhihu } from '@icons-pack/react-simple-icons';
+import { Icon } from '@iconify/react';
 import { Avatar } from '@nextui-org/avatar';
 import { Button } from '@nextui-org/button';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Chip } from '@nextui-org/chip';
 import { Link } from '@nextui-org/link';
-import type React from 'react';
 
-const LongSocialButton = ({ href, icon, text }: { href?: string; icon?: React.ReactNode; text?: string }) => {
+const HobbyChip = ({ text }: { text: string }) => {
   return (
-    <Button className='min-w-10' as={Link} href={href} target='_blank' startContent={icon} color='primary' variant='shadow' radius='lg'>
+    <Chip color='secondary' size='sm' variant='flat'>
+      {text}
+    </Chip>
+  );
+};
+
+const LongSocialButton = ({ href, icon, text }: { href: string; icon: string; text: string }) => {
+  return (
+    <Button
+      className='min-w-10'
+      as={Link}
+      href={href}
+      target='_blank'
+      startContent={<Icon icon={icon} width={20} />}
+      color='primary'
+      variant='shadow'
+      radius='lg'
+    >
       <div className='hidden sm:block'>{text}</div>
     </Button>
   );
 };
 
-const SocialButton = ({ href, icon }: { href?: string; icon?: React.ReactNode }) => {
+const SocialButton = ({ href, icon }: { href: string; icon: string }) => {
   return (
     <Button className='opacity-90' isIconOnly as={Link} href={href} target='blank' color='default' variant='light' radius='sm' size='sm'>
-      {icon}
+      <Icon icon={icon} width={18} />
     </Button>
   );
 };
@@ -34,34 +50,26 @@ export const IntroCard = () => {
           </div>
         </div>
 
-        <LongSocialButton href='https://github.com/VLTHellolin' icon={<SiGithub />} text='GitHub' />
+        <LongSocialButton href='https://github.com/VLTHellolin' icon='simple-icons:github' text='GitHub' />
       </CardHeader>
 
       <CardBody className='text-small text-default-500'>
         A Frontend Developer, Competitive Programmer and UI/UX enthusiast from China.
         <div className='flex mt-2 gap-1'>
-          <Chip size='sm' variant='flat'>
-            14 y.o.
-          </Chip>
-          <Chip size='sm' variant='flat'>
-            He/Him
-          </Chip>
-          <Chip size='sm' variant='flat'>
-            ENFP
-          </Chip>
-          <Chip size='sm' variant='flat'>
-            ACG Lover
-          </Chip>
+          <HobbyChip text='14 y.o.' />
+          <HobbyChip text='He/Him' />
+          <HobbyChip text='ENFP-T' />
+          <HobbyChip text='ACG Lover' />
         </div>
       </CardBody>
 
       <CardFooter>
         <div className='flex gap-1 ml-auto'>
-          <SocialButton href='https://x.com/VLTHellolin' icon={<SiX size={18} />} />
-          <SocialButton href='mailto:i@hellolin.top' icon={<SiGmail size={18} title='Mail' />} />
-          <SocialButton href='https://www.zhihu.com/people/hellolin.cf' icon={<SiZhihu size={18} />} />
-          <SocialButton href='https://steamcommunity.com/id/hellolin/' icon={<SiSteam size={18} />} />
-          <SocialButton href='https://discord.com/users/1060072430355370094' icon={<SiDiscord size={18} />} />
+          <SocialButton href='https://x.com/VLTHellolin' icon='simple-icons:x' />
+          <SocialButton href='mailto:i@hellolin.top' icon='material-symbols:stacked-email-outline-rounded' />
+          <SocialButton href='https://www.zhihu.com/people/hellolin.cf' icon='simple-icons:zhihu' />
+          <SocialButton href='https://steamcommunity.com/id/hellolin/' icon='simple-icons:steam' />
+          <SocialButton href='https://discord.com/users/1060072430355370094' icon='simple-icons:discord' />
         </div>
       </CardFooter>
     </Card>
