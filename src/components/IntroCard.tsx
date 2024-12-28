@@ -67,6 +67,7 @@ export const IntroCard = () => {
         <div className='flex gap-1 ml-auto'>
           <SocialButton href='https://x.com/VLTHellolin' icon='simple-icons:x' />
           <SocialButton href='mailto:i@hellolin.top' icon='material-symbols:stacked-email-outline-rounded' />
+          <SocialButton href='https://t.me/VLTHellolin' icon='simple-icons:telegram' />
           <SocialButton href='https://www.zhihu.com/people/hellolin.cf' icon='simple-icons:zhihu' />
           <SocialButton href='https://steamcommunity.com/id/hellolin/' icon='simple-icons:steam' />
           <SocialButton href='https://discord.com/users/1060072430355370094' icon='simple-icons:discord' />
