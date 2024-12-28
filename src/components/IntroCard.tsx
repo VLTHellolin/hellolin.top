@@ -7,7 +7,7 @@ import { Link } from '@nextui-org/link';
 
 const HobbyChip = ({ text }: { text: string }) => {
   return (
-    <Chip color='secondary' size='sm' variant='flat'>
+    <Chip size='sm' variant='flat'>
       {text}
     </Chip>
   );

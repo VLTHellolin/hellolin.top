@@ -1,2 +1,9 @@
-@import 'globals.css';
-@import 'common.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}

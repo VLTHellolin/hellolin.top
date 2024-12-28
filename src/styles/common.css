@@ -1,7 +1,0 @@
-.react-activity-calendar {
-  width: 100% !important;
-  &__scroll-container,
-  svg {
-    width: 100% !important;
-  }
-}
