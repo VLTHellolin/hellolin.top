@@ -2,6 +2,7 @@ import { Background } from './components/Background';
 import { Container } from './components/Container';
 import { Footer } from './components/Footer';
 import { IntroCard } from './components/IntroCard';
+import { Links } from './components/Links';
 import { SwitchTheme } from './components/SwitchTheme';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <>
       <Container>
         <IntroCard />
+        <Links />
       </Container>
       <Footer />
       <SwitchTheme />

@@ -41,7 +41,7 @@ const SocialButton = ({ href, icon }: { href: string; icon: string }) => {
 
 export const IntroCard = () => {
   return (
-    <motion.div initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}>
+    <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}>
       <Card className='p-4'>
         <CardHeader className='justify-between'>
           <div className='flex gap-3'>
