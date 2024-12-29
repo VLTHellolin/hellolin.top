@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+import { motion } from 'motion/react';
 
 export interface BackgroundProps {
   image?: string;
@@ -7,8 +7,6 @@ export interface BackgroundProps {
 }
 
 export const Background = ({ image, position }: BackgroundProps) => {
-  const [loaded, setLoaded] = useState(false);
-  useEffect(() => setLoaded(true));
   return (
     <div
       className={clsx(
@@ -18,11 +16,13 @@ export const Background = ({ image, position }: BackgroundProps) => {
       )}
       aria-hidden
     >
-      <img
+      <motion.img
         alt='background'
         src={image}
-        className='relative shadow-black/10 opacity-0 data-[loaded=true]:opacity-100 transition-transform-opacity !duration-1000'
-        data-loaded={loaded}
+        className='relative shadow-black/10'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 1, ease: 'easeInOut' }}
       />
     </div>
   );

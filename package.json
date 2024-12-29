@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint -c .eslintrc.json ./src/**/**/*.{ts,tsx} --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "biome check --write ."
   },
   "dependencies": {
     "@iconify/react": "^5.1.0",
