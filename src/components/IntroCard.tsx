@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 
 const HobbyChip = ({ text }: { text: string }) => {
   return (
-    <Chip size='sm' variant='flat'>
+    <Chip color='primary' size='sm' variant='flat'>
       {text}
     </Chip>
   );
@@ -31,10 +31,10 @@ const LongSocialButton = ({ href, icon, text }: { href: string; icon: string; te
   );
 };
 
-const SocialButton = ({ href, icon }: { href: string; icon: string }) => {
+const SocialButton = ({ href, icon, size = 18 }: { href: string; icon: string; size?: number }) => {
   return (
     <Button className='opacity-90' isIconOnly as={Link} href={href} target='blank' color='default' variant='light' radius='sm' size='sm'>
-      <Icon icon={icon} width={18} />
+      <Icon icon={icon} width={size} />
     </Button>
   );
 };
@@ -67,8 +67,8 @@ export const IntroCard = () => {
 
         <CardFooter>
           <div className='flex gap-1 ml-auto'>
+            <SocialButton href='mailto:i@hellolin.top' icon='material-symbols:mail-rounded' size={20} />
             <SocialButton href='https://x.com/VLTHellolin' icon='simple-icons:x' />
-            <SocialButton href='mailto:i@hellolin.top' icon='material-symbols:stacked-email-outline-rounded' />
             <SocialButton href='https://t.me/VLTHellolin' icon='simple-icons:telegram' />
             <SocialButton href='https://www.zhihu.com/people/hellolin.cf' icon='simple-icons:zhihu' />
             <SocialButton href='https://steamcommunity.com/id/hellolin/' icon='simple-icons:steam' />
