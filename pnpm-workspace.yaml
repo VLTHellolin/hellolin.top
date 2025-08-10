@@ -22,11 +22,10 @@ catalogs:
     '@unocss/postcss': ^66.3.3
     '@unocss/preset-attributify': ^66.3.3
     '@unocss/preset-icons': ^66.3.3
-    '@unocss/preset-wind4': ^66.3.3
+    '@unocss/preset-wind3': ^66.3.3
     '@unocss/transformer-attributify-jsx': ^66.3.3
     class-variance-authority: ^0.7.1
     clsx: ^2.1.1
-    cssnano: ^7.1.0
     katex: ^0.16.22
     next-themes: ^0.4.6
     postcss: ^8.5.6
@@ -43,7 +42,6 @@ catalogs:
     remark-math: ^6.0.0
     shiki: ^3.8.1
     unocss: ^66.3.3
-    unocss-preset-radix: ^2.8.2
   types:
     '@types/node': ^22.16.5
     '@types/react': ^19.1.8

@@ -5,6 +5,34 @@
   --font-mono: "Sarasa Mono SC", ui-monospace, monospace, Menlo, SFMono, Consolas;
 }
 
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --primary-bg: #090909;
+  --primary-fg: #ffffff;
+  --primary-border: #252525;
+  --secondary-bg: #e1e1e1;
+  --secondary-fg: #000000;
+  --secondary-border: #787271;
+  --muted-bg: #f4f4f5;
+  --muted-fg: #535353;
+  --muted-border: #d4d4d8;
+}
+
+[data-theme='dark'] {
+  --bg: #000000;
+  --fg: #ffffff;
+  --primary-bg: #f2f2f2;
+  --primary-fg: #000000;
+  --primary-border: #e4e4e6;
+  --secondary-bg: #1f1f1f;
+  --secondary-fg: #ffffff;
+  --secondary-border: #363641;
+  --muted-bg: #19191f;
+  --muted-fg: #aaaaad;
+  --muted-border: #18181b;
+}
+
 body {
   height: 100vh;
   overflow-y: scroll;
