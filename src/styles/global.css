@@ -1,0 +1,16 @@
+:root {
+  --font-serif: "Noto Serif SC", ui-serif, serif;
+  --font-sans: "Sarasa UI SC", -apple-system, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-mono: "Sarasa Mono SC", ui-monospace, monospace, Menlo, SFMono, Consolas;
+}
+
+body {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #8884;
+}

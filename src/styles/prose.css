@@ -1,0 +1,35 @@
+@layer base {
+  p, h1, h2, h3, h4, h5, h6 {
+    @apply wrap-break-word text-balance;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply text-base text-foreground leading-8;
+    p {
+      @apply text-foreground/90 my-4;
+    }
+    a {
+      @apply transition-colors underline;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-foreground font-medium scroll-mt-20;
+    }
+    h1 {
+      @apply text-4xl mt-8 mb-6;
+    }
+    h2 {
+      @apply text-2xl mt-8 mb-4;
+    }
+    h3 {
+      @apply text-xl mt-8 mb-4;
+    }
+    h4 {
+      @apply text-lg mt-6 mb-3;
+    }
+    h5 {
+      @apply mt-5 mb-3;
+    }
+  }
+}
