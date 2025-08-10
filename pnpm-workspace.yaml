@@ -1,8 +1,7 @@
 catalogs:
   backend:
     babel-plugin-react-compiler: ^19.1.0-rc.2
-    isbot: ^5.1.28
-    next: ^15.4.4
+    next: ^15.4.6
     velite: ^0.2.4
   dev:
     '@commitlint/config-conventional': ^19.8.1
@@ -10,20 +9,20 @@ catalogs:
     '@hellolin-eslint/unocss-config': ^1.0.0
     '@hellolin/eslint-config': ^1.0.0
     commitlint: ^19.8.1
-    eslint: ^9.32.0
+    eslint: ^9.33.0
     husky: ^9.1.7
-    lint-staged: ^16.1.2
+    lint-staged: ^16.1.5
     npm-run-all: ^4.1.5
-    typescript: ^5.8.3
+    typescript: ^5.9.2
   frontend:
     '@expressive-code/plugin-collapsible-sections': ^0.41.3
     '@expressive-code/plugin-line-numbers': ^0.41.3
-    '@iconify-json/lucide': ^1.2.58
-    '@unocss/postcss': ^66.3.3
-    '@unocss/preset-attributify': ^66.3.3
-    '@unocss/preset-icons': ^66.3.3
-    '@unocss/preset-wind3': ^66.3.3
-    '@unocss/transformer-attributify-jsx': ^66.3.3
+    '@iconify-json/lucide': ^1.2.62
+    '@unocss/postcss': ^66.4.2
+    '@unocss/preset-attributify': ^66.4.2
+    '@unocss/preset-icons': ^66.4.2
+    '@unocss/preset-wind3': ^66.4.2
+    '@unocss/transformer-attributify-jsx': ^66.4.2
     class-variance-authority: ^0.7.1
     clsx: ^2.1.1
     katex: ^0.16.22
@@ -31,8 +30,8 @@ catalogs:
     postcss: ^8.5.6
     postcss-nesting: ^13.0.2
     radix-ui: ^1.4.2
-    react: ^19.1.0
-    react-dom: ^19.1.0
+    react: ^19.1.1
+    react-dom: ^19.1.1
     rehype-expressive-code: ^0.41.3
     rehype-external-links: ^3.0.0
     rehype-katex: ^7.0.1
@@ -40,10 +39,10 @@ catalogs:
     rehype-slug: ^6.0.0
     remark-emoji: ^5.0.1
     remark-math: ^6.0.0
-    shiki: ^3.8.1
-    unocss: ^66.3.3
+    shiki: ^3.9.2
+    unocss: ^66.4.2
   types:
-    '@types/node': ^22.16.5
-    '@types/react': ^19.1.8
-    '@types/react-dom': ^19.1.6
-    typescript: ^5.8.3
+    '@types/node': ^22.17.1
+    '@types/react': ^19.1.9
+    '@types/react-dom': ^19.1.7
+    typescript: ^5.9.2

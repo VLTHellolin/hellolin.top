@@ -2,7 +2,7 @@
   "name": "hellolin.top",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "license": "AGPL-3.0-only",
   "scripts": {
     "prepare": "husky",
@@ -15,7 +15,7 @@
     "build": "run-s build:*",
     "prestart": "node scripts/showLicense.js",
     "start": "next start",
-    "lint": "eslint . --fix",
+    "lint": "eslint --cache --fix .",
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
