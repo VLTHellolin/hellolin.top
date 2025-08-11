@@ -1,1 +1,19 @@
-@unocss all;
+@layer properties {
+  @unocss properties;
+}
+
+@layer theme {
+  @unocss theme;
+}
+
+@layer base {
+  @unocss base;
+}
+
+@layer components {
+  @unocss components;
+}
+
+@layer default {
+  @unocss;
+}

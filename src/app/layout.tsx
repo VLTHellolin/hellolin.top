@@ -2,9 +2,7 @@ import type { Metadata } from 'next';
 import type React from 'react';
 import { ThemeProvider } from 'next-themes';
 
-import '@/styles/global.css';
-import '@/styles/uno.css';
-import '@/styles/prose.css';
+import '@/styles/index.css';
 
 export const metadata: Metadata = {
 

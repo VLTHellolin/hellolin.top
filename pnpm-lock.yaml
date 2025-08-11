@@ -62,7 +62,7 @@ catalogs:
     '@unocss/preset-icons':
       specifier: ^66.4.2
       version: 66.4.2
-    '@unocss/preset-wind3':
+    '@unocss/preset-wind4':
       specifier: ^66.4.2
       version: 66.4.2
     '@unocss/transformer-attributify-jsx':
@@ -204,7 +204,7 @@ importers:
       '@unocss/preset-icons':
         specifier: catalog:frontend
         version: 66.4.2
-      '@unocss/preset-wind3':
+      '@unocss/preset-wind4':
         specifier: catalog:frontend
         version: 66.4.2
       '@unocss/transformer-attributify-jsx':
@@ -6557,7 +6557,7 @@ snapshots:
 
   '@unocss/rule-utils@66.3.3':
     dependencies:
-      '@unocss/core': 66.3.3
+      '@unocss/core': 66.4.2
       magic-string: 0.30.17
 
   '@unocss/rule-utils@66.4.2':

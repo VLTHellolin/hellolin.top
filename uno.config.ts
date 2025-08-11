@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify, presetIcons, presetWind3, transformerAttributifyJsx } from 'unocss';
+import { defineConfig, presetAttributify, presetIcons, presetWind4, transformerAttributifyJsx } from 'unocss';
 
 const radixVariants = {
   open: '[data-state="open"]',
@@ -30,7 +30,7 @@ const colors = [
 
 export default defineConfig({
   presets: [
-    presetWind3({
+    presetWind4({
       dark: {
         light: '[data-theme="light"]',
         dark: '[data-theme="dark"]',

@@ -1,11 +1,8 @@
-import unocss from '@unocss/postcss';
-import nesting from 'postcss-nesting';
-
 export default {
-  plugins: [
-    nesting(),
-    unocss({
+  plugins: {
+    'postcss-nesting': {},
+    '@unocss/postcss': {
       content: ['./src/**/*.{html,js,ts,jsx,tsx,css}'],
-    }),
-  ],
+    },
+  },
 };
