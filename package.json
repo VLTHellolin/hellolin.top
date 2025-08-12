@@ -19,7 +19,6 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
-    "class-variance-authority": "catalog:frontend",
     "clsx": "catalog:frontend",
     "katex": "catalog:frontend",
     "next": "catalog:backend",

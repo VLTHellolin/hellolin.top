@@ -23,7 +23,6 @@ catalogs:
     '@unocss/preset-icons': ^66.4.2
     '@unocss/preset-wind4': ^66.4.2
     '@unocss/transformer-attributify-jsx': ^66.4.2
-    class-variance-authority: ^0.7.1
     clsx: ^2.1.1
     katex: ^0.16.22
     next-themes: ^0.4.6
@@ -43,6 +42,6 @@ catalogs:
     unocss: ^66.4.2
   types:
     '@types/node': ^22.17.1
-    '@types/react': ^19.1.9
+    '@types/react': ^19.1.10
     '@types/react-dom': ^19.1.7
     typescript: ^5.9.2
