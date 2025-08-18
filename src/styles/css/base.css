@@ -1,0 +1,15 @@
+body {
+  @apply h-100vh antialiased scroll-smooth overflow-y-scroll;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  @apply text-balance break-words;
+}
+
+::selection,
+::-moz-selection {
+  background: #8884;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -19,10 +19,10 @@ catalogs:
     '@expressive-code/plugin-line-numbers': ^0.41.3
     '@iconify-json/lucide': ^1.2.62
     '@unocss/postcss': ^66.4.2
-    '@unocss/preset-attributify': ^66.4.2
     '@unocss/preset-icons': ^66.4.2
-    '@unocss/preset-wind4': ^66.4.2
-    '@unocss/transformer-attributify-jsx': ^66.4.2
+    '@unocss/preset-wind3': ^66.4.2
+    '@unocss/reset': ^66.4.2
+    '@unocss/transformer-variant-group': ^66.4.2
     clsx: ^2.1.1
     katex: ^0.16.22
     next-themes: ^0.4.6

@@ -1,45 +1,15 @@
-import { defineConfig, presetAttributify, presetIcons, presetWind4, transformerAttributifyJsx } from 'unocss';
-
-const radixVariants = {
-  open: '[data-state="open"]',
-  closed: '[data-state="closed"]',
-  horizontal: '[data-orientation="horizontal"]',
-  vertical: '[data-orientation="vertical"]',
-  enabled: ':not([data-disabled])',
-  disabled: '[data-disabled]',
-};
-
-const colors = [
-  // Typography
-  'bg',
-  'fg',
-  // Semantic
-  'primary-bg',
-  'primary-fg',
-  'primary-border',
-  'secondary-bg',
-  'secondary-fg',
-  'secondary-border',
-  'muted-bg',
-  'muted-fg',
-  'muted-border',
-].reduce((acc, color) => {
-  acc[color] = `var(--${color})`;
-  return acc;
-}, {} as Record<string, string>);
+import { defineConfig, presetIcons, presetWind3, transformerVariantGroup } from 'unocss';
+import { presetStyles } from './src/styles';
 
 export default defineConfig({
   presets: [
-    presetWind4({
+    presetWind3({
       dark: {
         light: '[data-theme="light"]',
         dark: '[data-theme="dark"]',
       },
-      preflights: {
-        reset: true,
-      },
+      preflight: 'on-demand',
     }),
-    presetAttributify(),
     presetIcons({
       extraProperties: {
         'display': 'inline-block',
@@ -49,28 +19,19 @@ export default defineConfig({
         lucide: () => import('@iconify-json/lucide/icons.json').then(i => i.default),
       },
     }),
+    presetStyles(),
   ],
   transformers: [
-    transformerAttributifyJsx(),
+    transformerVariantGroup(),
   ],
   content: {
+    pipeline: {
+      include: [
+        /\.([jt]sx?|mdx?|html|css)($|\?)/,
+      ],
+    },
     filesystem: [
-      '**/*.{html,js,ts,jsx,tsx,css}',
+      '**/*.{html,md,mdx,js,ts,jsx,tsx,css}',
     ],
   },
-  theme: {
-    colors,
-  },
-  variants: [
-    matcher => {
-      const matcherVariant = matcher.split(':')[0];
-      if (matcherVariant in radixVariants) {
-        return {
-          matcher: matcher.slice(matcherVariant.length + 1),
-          selector: s => `${s}${radixVariants[matcherVariant as keyof typeof radixVariants]}`,
-        };
-      }
-      return matcher;
-    },
-  ],
 });

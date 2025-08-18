@@ -1,9 +1,5 @@
-/* Layers init */
-@import './layers.css';
+@import './css/theme.css';
+@import './css/base.css';
+@import './css/components/prose.css';
 
-/* Theme values and utilities */
-@import './global.css';
-@import './uno.css';
-
-/* Components */
-@import './prose.css';
+@unocss;
