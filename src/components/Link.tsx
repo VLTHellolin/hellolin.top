@@ -4,7 +4,7 @@ import { Slot } from 'radix-ui';
 import { type BakeIngredient, createRecipe } from '@/utils/recipe';
 
 const bake = createRecipe(
-  'inline-block break-words transition-(colors ease-in-out duration-200)',
+  'inline-block break-words transition-colors ease-in-out transition-duration-350',
   {
     variant: {
       normal: 'text-fg',

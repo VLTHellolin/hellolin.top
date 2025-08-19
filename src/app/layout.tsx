@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import type React from 'react';
 import { ThemeProvider } from 'next-themes';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
 
 import 'katex/dist/katex.min.css';
 import '@unocss/reset/tailwind.css';
@@ -9,7 +11,7 @@ import '@/styles/index.css';
 export const metadata: Metadata = {
   title: {
     default: 'hellolin.top',
-    template: '%s | hellolin.top',
+    template: '%s - hellolin.top',
   },
   creator: 'VLTHellolin',
   description: 'Front-end Developer, Competitive Programmer, Student of 15.',
@@ -46,9 +48,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name='theme-color' media='(prefers-color-scheme: light)' content='#ffffff' />
         <meta name='theme-color' media='(prefers-color-scheme: dark)' content='#121212' />
       </head>
-      <body className='bg-bg text-fg font-sans'>
+      <body>
         <ThemeProvider>
-          {children}
+          <div className='mx-auto h-screen max-w-4xl flex flex-col gap-8 px-2 md:px-4'>
+            <Header />
+            <main className='grow'>
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

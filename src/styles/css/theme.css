@@ -9,6 +9,7 @@
 :root {
   --bg: 255 255 255;
   --fg: 0 0 0;
+  --border: 230 230 230;
   --primary-bg: 9 9 9;
   --primary-fg: 255 255 255;
   --primary-border: 37 37 37;
@@ -24,6 +25,7 @@
   color-scheme: dark;
   --bg: 0 0 0;
   --fg: 255 255 255;
+  --border: 255 255 255;
   --primary-bg: 242 242 242;
   --primary-fg: 0 0 0;
   --primary-border: 228 228 230;

@@ -9,7 +9,7 @@ const bake = createRecipe(
     'items-center justify-center transition-all',
     'rounded-md font-medium line-height-relaxed',
     'whitespace-nowrap select-none cursor-pointer',
-    'disabled:(opacity-70 pointer-events-none)',
+    'disabled:opacity-70 disabled:pointer-events-none',
   ],
   {
     variant: {
@@ -19,10 +19,11 @@ const bake = createRecipe(
       ghost: 'bg-bg text-fg hover:bg-muted-bg/80',
     },
     size: {
-      sm: 'h-9 min-w-8 px-3.5 text-sm gap-1.5',
-      md: 'h-10 min-w-9 px-4 text-sm gap-2',
-      lg: 'h-11 min-w-11 px-5 text-base gap-3',
-      xl: 'h-13 min-w-13 px-5 text-lg gap-3',
+      sm: 'h-9 min-w-8 px-3.5 text-sm gap-1.5 [&_.icon]:size-3.5',
+      md: 'h-10 min-w-9 px-4 text-sm gap-2 [&_.icon]:size-4',
+      lg: 'h-11 min-w-11 px-5 text-base gap-3 [&_.icon]:size-5',
+      xl: 'h-13 min-w-13 px-5 text-lg gap-3 [&_.icon]:size-6',
+      icon: 'size-9 [&_.icon]:size-4',
     },
   },
 );

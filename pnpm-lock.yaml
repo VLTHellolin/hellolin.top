@@ -65,9 +65,6 @@ catalogs:
     '@unocss/reset':
       specifier: ^66.4.2
       version: 66.4.2
-    '@unocss/transformer-variant-group':
-      specifier: ^66.4.2
-      version: 66.4.2
     clsx:
       specifier: ^2.1.1
       version: 2.1.1
@@ -199,9 +196,6 @@ importers:
         specifier: catalog:frontend
         version: 66.4.2
       '@unocss/preset-wind3':
-        specifier: catalog:frontend
-        version: 66.4.2
-      '@unocss/transformer-variant-group':
         specifier: catalog:frontend
         version: 66.4.2
       babel-plugin-react-compiler:

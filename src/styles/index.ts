@@ -14,6 +14,7 @@ const colors = [
   'bg',
   'fg',
   // Semantic
+  'border',
   'primary-bg',
   'primary-fg',
   'primary-border',

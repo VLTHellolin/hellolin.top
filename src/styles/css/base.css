@@ -1,8 +1,8 @@
 body {
-  @apply h-100vh antialiased scroll-smooth overflow-y-scroll;
+  @apply bg-bg text-fg font-sans h-100vh antialiased scroll-smooth overflow-y-scroll;
 }
 p, h1, h2, h3, h4, h5, h6 {
-  @apply text-balance break-words;
+  @apply text-wrap break-words;
 }
 
 ::selection,
@@ -12,4 +12,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 * {
   -webkit-tap-highlight-color: transparent;
+  letter-spacing: -0.005em;
+  @apply border-border dark:border-border/15;
 }

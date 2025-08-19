@@ -1,4 +1,4 @@
-import { defineConfig, presetIcons, presetWind3, transformerVariantGroup } from 'unocss';
+import { defineConfig, presetIcons, presetWind3 } from 'unocss';
 import { presetStyles } from './src/styles';
 
 export default defineConfig({
@@ -20,9 +20,6 @@ export default defineConfig({
       },
     }),
     presetStyles(),
-  ],
-  transformers: [
-    transformerVariantGroup(),
   ],
   content: {
     pipeline: {
