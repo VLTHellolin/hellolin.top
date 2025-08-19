@@ -1,13 +1,13 @@
 catalogs:
   backend:
     babel-plugin-react-compiler: ^19.1.0-rc.2
-    next: ^15.4.6
+    next: ^15.4.7
     velite: ^0.2.4
   dev:
     '@commitlint/config-conventional': ^19.8.1
-    '@hellolin-eslint/react-config': ^1.0.0
-    '@hellolin-eslint/unocss-config': ^1.0.0
-    '@hellolin/eslint-config': ^1.0.0
+    '@hellolin-eslint/react-config': ^1.1.0
+    '@hellolin-eslint/unocss-config': ^1.1.0
+    '@hellolin/eslint-config': ^1.1.0
     commitlint: ^19.8.1
     eslint: ^9.33.0
     husky: ^9.1.7
@@ -28,7 +28,7 @@ catalogs:
     next-themes: ^0.4.6
     postcss: ^8.5.6
     postcss-nesting: ^13.0.2
-    radix-ui: ^1.4.2
+    radix-ui: ^1.4.3
     react: ^19.1.1
     react-dom: ^19.1.1
     rehype-expressive-code: ^0.41.3
@@ -41,7 +41,7 @@ catalogs:
     shiki: ^3.9.2
     unocss: ^66.4.2
   types:
-    '@types/node': ^22.17.1
+    '@types/node': ^22.17.2
     '@types/react': ^19.1.10
     '@types/react-dom': ^19.1.7
     typescript: ^5.9.2
