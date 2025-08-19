@@ -17,7 +17,7 @@ catalogs:
   frontend:
     '@expressive-code/plugin-collapsible-sections': ^0.41.3
     '@expressive-code/plugin-line-numbers': ^0.41.3
-    '@iconify-json/lucide': ^1.2.62
+    '@iconify-json/lucide': ^1.2.63
     '@unocss/postcss': ^66.4.2
     '@unocss/preset-icons': ^66.4.2
     '@unocss/preset-wind3': ^66.4.2
@@ -37,7 +37,7 @@ catalogs:
     rehype-slug: ^6.0.0
     remark-emoji: ^5.0.1
     remark-math: ^6.0.0
-    shiki: ^3.9.2
+    shiki: ^3.10.0
     unocss: ^66.4.2
   types:
     '@types/node': ^22.17.2
