@@ -7,7 +7,7 @@ export const Footer = () => {
         &copy; 2023-2025 hellolin. All rights reserved.
       </div>
       <div className='flex flex-wrap justify-center gap-2'>
-        <SocialButton href='https://github.com/VLTHellolin' external label='GitHub' icon='i-lucide-github' />
+        <SocialButton href='https://github.com/VLTHellolin/hellolin.top' external label='GitHub' icon='i-lucide-github' />
         <SocialButton href='/rss.xml' label='RSS Feed' icon='i-lucide-rss' />
       </div>
     </footer>

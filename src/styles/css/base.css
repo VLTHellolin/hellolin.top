@@ -1,8 +1,11 @@
 body {
   @apply bg-bg text-fg font-sans h-100vh antialiased scroll-smooth overflow-y-scroll;
 }
-p, h1, h2, h3, h4, h5, h6 {
-  @apply text-wrap break-words;
+p {
+  @apply text-pretty break-words;
+}
+h1, h2, h3, h4, h5, h6 {
+  @apply text-balance break-words;
 }
 
 ::selection,

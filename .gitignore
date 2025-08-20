@@ -3,6 +3,7 @@
 .next
 .velite
 .eslintcache
+public/static
 
 next-env.d.ts
 

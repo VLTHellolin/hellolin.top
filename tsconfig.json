@@ -15,6 +15,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@content/*": [
+        "./.velite/*"
       ]
     },
     "resolveJsonModule": true,

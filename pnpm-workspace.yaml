@@ -18,6 +18,7 @@ catalogs:
     '@expressive-code/plugin-collapsible-sections': ^0.41.3
     '@expressive-code/plugin-line-numbers': ^0.41.3
     '@iconify-json/lucide': ^1.2.63
+    '@iconify-json/simple-icons': ^1.2.48
     '@unocss/postcss': ^66.4.2
     '@unocss/preset-icons': ^66.4.2
     '@unocss/preset-wind3': ^66.4.2

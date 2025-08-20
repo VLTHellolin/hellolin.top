@@ -53,6 +53,9 @@ catalogs:
     '@iconify-json/lucide':
       specifier: ^1.2.63
       version: 1.2.63
+    '@iconify-json/simple-icons':
+      specifier: ^1.2.48
+      version: 1.2.48
     '@unocss/postcss':
       specifier: ^66.4.2
       version: 66.4.2
@@ -180,6 +183,9 @@ importers:
       '@iconify-json/lucide':
         specifier: catalog:frontend
         version: 1.2.63
+      '@iconify-json/simple-icons':
+        specifier: catalog:frontend
+        version: 1.2.48
       '@types/node':
         specifier: catalog:types
         version: 22.17.2
@@ -786,6 +792,9 @@ packages:
 
   '@iconify-json/lucide@1.2.63':
     resolution: {integrity: sha512-4rRKhUhEh4TsBq5ypbimHbBA6ApIcDLR9gzjnJT2cvUn2+rG+oG4TPXgHLFmIaRkHKYcMKukdcfOUaJbM/G4pQ==}
+
+  '@iconify-json/simple-icons@1.2.48':
+    resolution: {integrity: sha512-EACOtZMoPJtERiAbX1De0asrrCtlwI27+03c9OJlYWsly9w1O5vcD8rTzh+kDPjo+K8FOVnq2Qy+h/CzljSKDA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -5188,6 +5197,10 @@ snapshots:
   '@humanwhocodes/retry@0.4.3': {}
 
   '@iconify-json/lucide@1.2.63':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.48':
     dependencies:
       '@iconify/types': 2.0.0
 

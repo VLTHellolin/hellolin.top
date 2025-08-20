@@ -36,6 +36,7 @@
     "@hellolin-eslint/unocss-config": "catalog:dev",
     "@hellolin/eslint-config": "catalog:dev",
     "@iconify-json/lucide": "catalog:frontend",
+    "@iconify-json/simple-icons": "catalog:frontend",
     "@types/node": "catalog:types",
     "@types/react": "catalog:types",
     "@types/react-dom": "catalog:types",
