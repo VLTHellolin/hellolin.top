@@ -15,7 +15,7 @@ const bake = createRecipe(
     variant: {
       primary: 'bg-primary-bg text-primary-fg hover:bg-primary-bg/90',
       secondary: 'bg-secondary-bg text-secondary-fg hover:bg-secondary-bg/80',
-      outline: 'bg-bg text-fg border border-muted-border hover:bg-muted-bg/80',
+      outline: 'bg-bg text-fg border hover:bg-muted-bg/80',
       ghost: 'bg-bg text-fg hover:bg-muted-bg/80',
     },
     size: {

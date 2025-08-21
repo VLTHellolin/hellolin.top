@@ -11,8 +11,21 @@ export default {
       hmrRefreshes: true,
     },
   },
+  productionBrowserSourceMaps: false,
   experimental: {
+    webpackMemoryOptimizations: true,
     optimizePackageImports: ['radix-ui'],
     reactCompiler: true,
+    webpackBuildWorker: true,
+    serverMinification: true,
+    serverSourceMaps: false,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 } satisfies NextConfig;

@@ -1,10 +1,11 @@
 ---
 title: Demo Title Here
 date: 2025-08-20
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare, lectus vitae tristique ornare.
 image: ./banner.jpg
 tags:
-  - test-tag
+  - frontend
+  - react
 authors:
   - hellolin
 ---

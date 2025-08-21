@@ -1,5 +1,19 @@
 import { defineCollection, s } from 'velite';
 
+const permalinkTransformer = <T extends { slug: string }>(data: T) => ({ ...data, permalink: `/${data.slug}` });
+const imageTransformer = <T extends Record<string, any>>(data: T) => {
+  const imageEntries = ['image', 'avatar'];
+
+  for (const entry of imageEntries) {
+    if (entry in data) {
+      delete data[entry as keyof T].blurWidth;
+      delete data[entry as keyof T].blurHeight;
+    }
+  }
+
+  return data;
+};
+
 const blog = defineCollection({
   name: 'Blog',
   pattern: 'posts/**/*.md',
@@ -16,7 +30,8 @@ const blog = defineCollection({
     metadata: s.metadata(),
     toc: s.toc(),
     code: s.mdx(),
-  }).transform(data => ({ ...data, permalink: `/posts/${data.slug}` })),
+  }).transform(permalinkTransformer)
+    .transform(imageTransformer),
 });
 
 const authors = defineCollection({
@@ -35,7 +50,8 @@ const authors = defineCollection({
     }).optional(),
     // auto generated entries
     slug: s.path(),
-  }).transform(data => ({ ...data, permalink: `/authors/${data.slug}` })),
+  }).transform(permalinkTransformer)
+    .transform(imageTransformer),
 });
 
 const projects = defineCollection({
@@ -50,7 +66,8 @@ const projects = defineCollection({
     tags: s.array(s.string()).optional(),
     // auto generated entries
     slug: s.path(),
-  }).transform(data => ({ ...data, permalink: `/projects/${data.slug}` })),
+  }).transform(permalinkTransformer)
+    .transform(imageTransformer),
 });
 
 export const collections = { blog, authors, projects };

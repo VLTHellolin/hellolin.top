@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import NextLink from 'next/link';
+import { Button } from '@/components/Button';
+import { Icon } from '@/components/Icon';
 import { Link } from '@/components/Link';
 import { PostCard } from '@/components/PostCard';
 import { getRecentPosts } from '@/utils/posts';
@@ -34,6 +37,14 @@ export default async function Home() {
         <h2 className='text-2xl font-medium'>Recent Posts</h2>
         <div className='flex flex-col gap-4'>
           {recentPosts.map(post => <PostCard post={post} key={post.title} />)}
+          <div className='flex justify-right'>
+            <Button variant='outline' asChild>
+              <NextLink href='/posts'>
+                <Icon className='i-lucide-gallery-vertical-end' />
+                View all posts
+              </NextLink>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
