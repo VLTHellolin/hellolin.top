@@ -20,6 +20,10 @@ export default {
     serverMinification: true,
     serverSourceMaps: false,
   },
+  // Next.js seems to think it's fun to render metadata inside <body>.
+  // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#streaming-metadata
+  // https://github.com/vercel/next.js/issues/79313
+  htmlLimitedBots: /.*/,
   images: {
     remotePatterns: [
       {

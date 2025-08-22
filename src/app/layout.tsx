@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s - hellolin.top',
   },
   creator: 'VLTHellolin',
-  description: 'Front-end Developer, Competitive Programmer, Student of 15.',
+  description: 'A full-stack developer, competitive programmer and high-school student, passionate about open-source development.',
   alternates: {
     canonical: 'https://hellolin.top',
     types: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'hellolin.top',
-    description: 'Front-end Developer, Competitive Programmer, Student of 15.',
+    description: 'A full-stack developer, competitive programmer and high-school student, passionate about open-source development.',
     url: 'https://hellolin.top',
     siteName: 'hellolin.top',
     images: [
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#default-fields
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        <meta charSet='utf-8' />
         <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
-        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge,chrome=1' />
         <link rel='sitemap' href='/sitemap.xml' />
+        <meta name='format-detection' content='telephone=no,email=no,date=no,address=no' />
         <meta name='theme-color' media='(prefers-color-scheme: light)' content='#ffffff' />
         <meta name='theme-color' media='(prefers-color-scheme: dark)' content='#121212' />
       </head>
