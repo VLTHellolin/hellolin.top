@@ -9,6 +9,7 @@ import '@unocss/reset/tailwind.css';
 import '@/styles/index.css';
 
 export const metadata: Metadata = {
+  generator: `Next.js v${process.env.NEXT_VERSION}`,
   title: {
     default: 'hellolin.top',
     template: '%s - hellolin.top',

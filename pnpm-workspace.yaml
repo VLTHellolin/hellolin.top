@@ -1,15 +1,16 @@
 catalogs:
   backend:
     babel-plugin-react-compiler: ^19.1.0-rc.2
-    next: ^15.4.7
+    next: ^15.5.0
     velite: ^0.2.4
   dev:
     '@commitlint/config-conventional': ^19.8.1
-    '@hellolin-eslint/react-config': ^1.1.0
-    '@hellolin-eslint/unocss-config': ^1.1.0
-    '@hellolin/eslint-config': ^1.1.0
+    '@hellolin-eslint/react-config': ^1.2.0
+    '@hellolin-eslint/unocss-config': ^1.2.0
+    '@hellolin/eslint-config': ^1.2.0
     commitlint: ^19.8.1
     eslint: ^9.33.0
+    execa: ^9.6.0
     husky: ^9.1.7
     lint-staged: ^16.1.5
     npm-run-all: ^4.1.5
@@ -37,7 +38,7 @@ catalogs:
     rehype-slug: ^6.0.0
     remark-emoji: ^5.0.1
     remark-math: ^6.0.0
-    shiki: ^3.10.0
+    shiki: ^3.11.0
     unocss: ^66.4.2
   types:
     '@types/node': ^22.17.2
