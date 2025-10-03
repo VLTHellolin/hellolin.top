@@ -14,8 +14,8 @@ export default async function Home() {
   const recentPosts = await getRecentPosts();
 
   return (
-    <div className='flex grow flex-col gap-6'>
-      <section className='flex flex-col gap-2 border rounded-lg p-6'>
+    <div className='flex grow flex-col gap-8'>
+      <section className='flex flex-col gap-2 border rounded-md p-6'>
         <div className='flex items-baseline gap-1'>
           <h2 className='text-2xl font-medium'>hellolin</h2>
           <p className='text-sm text-muted-fg'>@VLTHellolin</p>
@@ -34,17 +34,14 @@ export default async function Home() {
         </div>
       </section>
       <section className='flex flex-col gap-4'>
-        <h2 className='text-2xl font-medium'>Recent Posts</h2>
-        <div className='flex flex-col gap-4'>
-          {recentPosts.map(post => <PostCard post={post} key={post.title} />)}
-          <div className='flex justify-right'>
-            <Button variant='outline' asChild>
-              <NextLink href='/posts'>
-                <Icon className='i-lucide-gallery-vertical-end' />
-                View all posts
-              </NextLink>
-            </Button>
-          </div>
+        {recentPosts.map(post => <PostCard post={post} key={post.title} />)}
+        <div className='flex justify-right'>
+          <Button variant='outline' asChild>
+            <NextLink href='/posts'>
+              <Icon className='i-lucide-gallery-vertical-end' />
+              View all posts
+            </NextLink>
+          </Button>
         </div>
       </section>
     </div>

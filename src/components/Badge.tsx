@@ -7,8 +7,9 @@ const bake = createRecipe(
     'relative inline-flex',
     'shrink-0 [&_.icon]:shrink-0 outline-none',
     'items-center justify-center transition-all',
-    'rounded-md font-medium w-fit overflow-hidden',
+    'rounded-sm font-normal text-sm w-fit overflow-hidden',
     'whitespace-nowrap select-none',
+    'focus-visible:ring-2 focus-visible:ring-offset-2',
   ],
   {
     variant: {

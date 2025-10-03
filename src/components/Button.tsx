@@ -7,16 +7,17 @@ const bake = createRecipe(
     'relative inline-flex',
     'shrink-0 [&_.icon]:shrink-0 outline-none',
     'items-center justify-center transition-all',
-    'rounded-md font-medium line-height-relaxed',
+    'rounded-sm font-medium line-height-relaxed',
     'whitespace-nowrap select-none cursor-pointer',
     'disabled:opacity-70 disabled:pointer-events-none',
+    'focus-visible:ring-2 focus-visible:ring-offset-2',
   ],
   {
     variant: {
       primary: 'bg-primary-bg text-primary-fg hover:bg-primary-bg/90',
       secondary: 'bg-secondary-bg text-secondary-fg hover:bg-secondary-bg/80',
-      outline: 'bg-bg text-fg border hover:bg-muted-bg/80',
-      ghost: 'bg-bg text-fg hover:bg-muted-bg/80',
+      outline: 'bg-bg text-fg border hover:bg-secondary-bg/30',
+      ghost: 'bg-bg text-fg hover:bg-secondary-bg/30',
     },
     size: {
       sm: 'h-9 min-w-8 px-3.5 text-sm gap-1.5 [&_.icon]:size-3.5',

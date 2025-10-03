@@ -17,4 +17,5 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-tap-highlight-color: transparent;
   letter-spacing: -0.005em;
   @apply border-border dark:border-border/15;
+  @apply ring-border dark:ring-border/10;
 }

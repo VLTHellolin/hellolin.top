@@ -17,7 +17,7 @@ export const PostCard = async ({
 }: PostCardProps) => {
   return (
     <NextLink href={post.permalink}>
-      <div className='border rounded-lg bg-bg p-6 text-fg transition-colors duration-350 [&:hover_.enter-arrow]:translate-x-4px hover:bg-muted-bg/80'>
+      <div className='border rounded-md bg-bg p-6 text-fg transition-colors duration-350 [&:hover_.enter-arrow]:translate-x-4px hover:bg-secondary-bg/30'>
         <div className='flex flex-col gap-4 sm:flex-row'>
           {post.image && (
             <div className='max-w-15rem sm:shrink-0'>
