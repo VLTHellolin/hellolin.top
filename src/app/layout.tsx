@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     default: 'hellolin.top',
     template: '%s - hellolin.top',
   },
+  applicationName: 'hellolin.top',
   creator: 'VLTHellolin',
   description: 'A full-stack developer, competitive programmer and high-school student, passionate about open-source development.',
   alternates: {
