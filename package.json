@@ -20,6 +20,7 @@
     "@unocss/reset": "catalog:frontend",
     "clsx": "catalog:frontend",
     "es-toolkit": "catalog:frontend",
+    "feed": "catalog:backend",
     "katex": "catalog:frontend",
     "next": "catalog:backend",
     "next-themes": "catalog:frontend",

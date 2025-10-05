@@ -1,6 +1,7 @@
 catalogs:
   backend:
     babel-plugin-react-compiler: ^19.1.0-rc.3
+    feed: ^5.1.0
     next: ^15.5.4
     velite: ^0.2.4
   dev:

@@ -31,6 +31,7 @@ const blog = defineCollection({
     metadata: s.metadata(),
     toc: s.toc(),
     code: s.mdx(),
+    raw: s.raw(), // for feed
   }).transform(slugTransformer)
     .transform(permalinkTransformer)
     .transform(imageTransformer),
