@@ -1,7 +1,7 @@
 .prose {
-  @apply text-base text-fg leading-8
+  @apply text-base text-fg leading-7;
   p {
-    @apply text-fg/90 my-4
+    @apply text-fg/85 my-4;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply text-fg font-medium scroll-mt-30 xl:scroll-mt-20;
@@ -21,7 +21,10 @@
   h5 {
     @apply mt-5 mb-3;
   }
-  code {
+  .expressive-code .frame pre {
+    @apply overflow-hidden;
+  }
+  :not(.expressive-code) code {
     @apply relative bg-muted-bg/60 text-fg px-1 py-0.5 rounded-md break-words;
   }
   pre {

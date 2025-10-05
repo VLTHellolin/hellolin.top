@@ -74,6 +74,9 @@ catalogs:
     clsx:
       specifier: ^2.1.1
       version: 2.1.1
+    es-toolkit:
+      specifier: ^1.39.10
+      version: 1.39.10
     katex:
       specifier: ^0.16.22
       version: 0.16.22
@@ -146,6 +149,9 @@ importers:
       clsx:
         specifier: catalog:frontend
         version: 2.1.1
+      es-toolkit:
+        specifier: catalog:frontend
+        version: 1.39.10
       katex:
         specifier: catalog:frontend
         version: 0.16.22
@@ -2570,6 +2576,9 @@ packages:
   es-to-primitive@1.3.0:
     resolution: {integrity: sha512-w+5mJ3GuFL+NjVtJlvydShqE1eN3h3PbI7/5LAsYJP/2qtuMXjfL2LpHSRqo4b4eSF5K/DH1JXKUAHSB2UW50g==}
     engines: {node: '>= 0.4'}
+
+  es-toolkit@1.39.10:
+    resolution: {integrity: sha512-E0iGnTtbDhkeczB0T+mxmoVlT4YNweEKBLq7oaU4p11mecdsZpNWOglI4895Vh4usbQ+LsJiuLuI2L0Vdmfm2w==}
 
   esast-util-from-estree@2.0.0:
     resolution: {integrity: sha512-4CyanoAudUSBAn5K13H4JhsMH6L9ZP7XbLVe/dKybkxMO7eDyLsT8UHl9TRNrU2Gr9nz+FovfSIjuXWJ81uVwQ==}
@@ -7262,6 +7271,8 @@ snapshots:
       is-callable: 1.2.7
       is-date-object: 1.1.0
       is-symbol: 1.1.1
+
+  es-toolkit@1.39.10: {}
 
   esast-util-from-estree@2.0.0:
     dependencies:

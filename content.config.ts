@@ -1,6 +1,7 @@
 import { defineCollection, s } from 'velite';
 
-const permalinkTransformer = <T extends { slug: string }>(data: T) => ({ ...data, permalink: `/${data.slug}` });
+const slugTransformer = <T extends { path: string }>(data: T) => ({ ...data, slug: data.path.split('/').pop() || '' });
+const permalinkTransformer = <T extends { path: string }>(data: T) => ({ ...data, permalink: `/${data.path}` });
 const imageTransformer = <T extends Record<string, any>>(data: T) => {
   const imageEntries = ['image', 'avatar'];
 
@@ -26,11 +27,12 @@ const blog = defineCollection({
     tags: s.array(s.string()).optional(),
     authors: s.array(s.string()),
     // auto generated entries
-    slug: s.path(),
+    path: s.path(),
     metadata: s.metadata(),
     toc: s.toc(),
     code: s.mdx(),
-  }).transform(permalinkTransformer)
+  }).transform(slugTransformer)
+    .transform(permalinkTransformer)
     .transform(imageTransformer),
 });
 
@@ -49,8 +51,9 @@ const authors = defineCollection({
       twitter: s.string().url().optional(),
     }).optional(),
     // auto generated entries
-    slug: s.path(),
-  }).transform(permalinkTransformer)
+    path: s.path(),
+  }).transform(slugTransformer)
+    .transform(permalinkTransformer)
     .transform(imageTransformer),
 });
 
@@ -65,8 +68,9 @@ const projects = defineCollection({
     archived: s.boolean().optional(),
     tags: s.array(s.string()).optional(),
     // auto generated entries
-    slug: s.path(),
-  }).transform(permalinkTransformer)
+    path: s.path(),
+  }).transform(slugTransformer)
+    .transform(permalinkTransformer)
     .transform(imageTransformer),
 });
 

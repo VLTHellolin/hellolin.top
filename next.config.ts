@@ -20,7 +20,7 @@ export default {
   experimental: {
     webpackBuildWorker: true,
     webpackMemoryOptimizations: true,
-    optimizePackageImports: ['radix-ui'],
+    optimizePackageImports: ['radix-ui', 'es-toolkit'],
     reactCompiler: true,
     serverMinification: true,
     serverSourceMaps: false,

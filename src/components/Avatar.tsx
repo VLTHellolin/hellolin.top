@@ -26,7 +26,7 @@ export const Avatar = ({
   return (
     <AvatarPrimitive.Root
       className={clsx(
-        'relative flex rounded-full shrink-0 overflow-hidden',
+        'relative flex shrink-0 overflow-hidden rounded-full',
         className,
       )}
     >

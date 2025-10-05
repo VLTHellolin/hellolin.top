@@ -1,4 +1,5 @@
 import type React from 'react';
+import { range } from 'es-toolkit';
 import NextLink from 'next/link';
 import { Button, type ButtonProps } from './Button';
 import { Icon } from './Icon';
@@ -56,7 +57,6 @@ export const Pagination = ({
 
   const rangeLeft = Math.max(1, currentPage - 2);
   const rangeRight = Math.min(totalPages, currentPage + 2);
-  const rangeLength = rangeRight - rangeLeft + 1;
 
   return (
     <div
@@ -85,7 +85,7 @@ export const Pagination = ({
           </li>
         )}
 
-        {Array.from({ length: rangeLength }, (_, i) => i + rangeLeft).map(page => (
+        {range(rangeLeft, rangeRight).map(page => (
           <li key={page}>
             <PaginationLink
               href={getUrl(page)}

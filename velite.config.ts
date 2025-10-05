@@ -9,6 +9,7 @@ import remarkEmoji from 'remark-emoji';
 import remarkMath from 'remark-math';
 import { defineConfig } from 'velite';
 
+import { styleOverrides } from '@/styles/expressiveCode';
 import { collections } from './content.config';
 
 export default defineConfig({
@@ -39,6 +40,16 @@ export default defineConfig({
           plugins: [pluginCollapsibleSections(), pluginLineNumbers()],
           useDarkModeMediaQuery: false,
           themeCssSelector: theme => `[data-theme="${theme.name.split('-')[1]}"]`,
+          styleOverrides,
+          defaultProps: {
+            showLineNumbers: true,
+            wrap: true,
+            overridesByLang: {
+              'ansi,asciidoc,bat,bash,batch,cmd,console,plain,powershell,ps,ps1,sh,shell,shellscript,shellsession,text,txt': {
+                showLineNumbers: false,
+              },
+            },
+          },
         } satisfies RehypeExpressiveCodeOptions,
       ],
       [

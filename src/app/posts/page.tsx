@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import { Pagination } from '@/components/Pagination';
 import { PostCard } from '@/components/PostCard';
 import { getAllPosts } from '@/utils/posts';
+
+export const metadata: Metadata = {
+  title: 'Posts',
+};
 
 export default async function Posts({
   searchParams,

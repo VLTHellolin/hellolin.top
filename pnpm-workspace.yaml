@@ -24,6 +24,7 @@ catalogs:
     '@unocss/preset-wind3': ^66.5.2
     '@unocss/reset': ^66.5.2
     clsx: ^2.1.1
+    es-toolkit: ^1.39.10
     katex: ^0.16.22
     next-themes: ^0.4.6
     postcss: ^8.5.6

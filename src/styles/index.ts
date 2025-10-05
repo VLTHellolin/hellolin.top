@@ -6,7 +6,7 @@ const radixVariants = {
   horizontal: '[data-orientation="horizontal"]',
   vertical: '[data-orientation="vertical"]',
   enabled: ':not([data-disabled])',
-  disabled: '[data-disabled]',
+  // disabled: '[data-disabled]',
 };
 
 const colors = [
@@ -40,6 +40,9 @@ export const presetStyles = (): Preset => ({
     colors,
     fontFamily,
   },
+  rules: [
+    ['scrollbar-none', { 'scrollbar-width': 'none', '-ms-overflow-style': 'none' }],
+  ],
   variants: [
     matcher => {
       const matcherVariant = matcher.split(':')[0];
