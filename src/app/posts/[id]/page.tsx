@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Avatar } from '@/components/Avatar';
+import { Badge } from '@/components/Badge';
+import { Icon } from '@/components/Icon';
+import { Link } from '@/components/Link';
 import { MDXContent } from '@/components/MDXContent';
 import { PostPagination } from '@/components/PostPagination';
+import { Separator } from '@/components/Separator';
 import { Toc } from '@/components/Toc';
-import { getAdjacentPosts, getAllPosts, getPostById } from '@/utils/posts';
+import { formatDate } from '@/utils/date';
+import { getAdjacentPosts, getAllPosts, getPostAuthors, getPostById } from '@/utils/posts';
 
 export const dynamicParams = false;
 
@@ -46,14 +52,56 @@ export default async function Post({
   }
 
   return (
-    <div className='flex flex-row'>
-      <div className='flex flex-col gap-6'>
+    <div className='flex flex-col gap-8'>
+      <section>
+        {/* {post.image && (
+          <NextImage
+            className='mb-2 rounded-sm object-cover'
+            src={post.image.src}
+            alt={post.title}
+            blurDataURL={post.image.blurDataURL}
+            width={1200}
+            height={630}
+          />
+        )} */}
+        <div className='mt-5 flex flex-col gap-2'>
+          <div className='flex flex-wrap gap-2 text-sm'>
+            {post.tags?.map(tag => (
+              <Badge variant='secondary' size='sm' key={tag}>
+                <Icon className='i-lucide-hash' />
+                {tag}
+              </Badge>
+            ))}
+          </div>
+          <h1 className='text-4xl font-medium leading-tight'>{post.title}</h1>
+          <div className='flex flex-wrap items-center gap-2 text-sm text-muted-fg'>
+            {post.authors.length !== 0 && (
+              <>
+                {(await getPostAuthors(post.authors)).map(author => (
+                  <div className='flex items-center gap-1.5' key={author.name}>
+                    <Avatar className='size-4.5 translate-y--1px' image={author.avatar} fallback={author.name} />
+                    <Link href={author.permalink}>{author.name}</Link>
+                  </div>
+                ))}
+                <Separator orientation='vertical' size='sm' />
+              </>
+            )}
+            <span>{formatDate(post.date)}</span>
+            <Separator orientation='vertical' size='sm' />
+            <span className='flex items-center gap-1'>
+              <Icon className='i-lucide-clock size-3.7 translate-y--1px' />
+              {post.metadata.readingTime} min{post.metadata.readingTime > 1 && 's'}
+            </span>
+          </div>
+        </div>
+      </section>
+      <div className='flex flex-row'>
         <article className='prose'>
           <MDXContent code={post.code} />
         </article>
-        <PostPagination previous={previous} next={next} />
+        <Toc toc={post.toc} />
       </div>
-      <Toc toc={post.toc} />
+      <PostPagination previous={previous} next={next} />
     </div>
   );
 }

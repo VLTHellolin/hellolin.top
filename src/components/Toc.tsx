@@ -150,7 +150,7 @@ export const Toc = ({ toc }: TocProps) => {
 
   return (
     <aside className='hidden w-0 lg:block'>
-      <nav ref={navRef} className='sticky top-25 max-h-[75vh] w-md flex flex-col translate-x-5 gap-3 overflow-auto overscroll-contain px-2 text-sm text-muted-fg scrollbar-none'>
+      <nav ref={navRef} className='sticky top-20 max-h-[75vh] w-md flex flex-col translate-x-5 gap-3 overflow-auto overscroll-contain px-2 text-sm text-muted-fg scrollbar-none'>
         <div className='flex items-center gap-3'>
           <Icon className='i-lucide-menu size-4' label='Table of Contents' />
           <span className='translate-y-1px text-sm'>{readingProgress}%</span>
