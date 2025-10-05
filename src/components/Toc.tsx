@@ -135,7 +135,7 @@ export const Toc = ({ toc }: TocProps) => {
     const scrollHandler = throttle(() => {
       getReadingProgress();
       syncCurrent();
-    }, 200);
+    }, 150);
 
     const controller = new AbortController();
     window.addEventListener('scroll', scrollHandler, {
