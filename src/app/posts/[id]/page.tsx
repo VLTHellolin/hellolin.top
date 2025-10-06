@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Avatar } from '@/components/Avatar';
-import { Badge } from '@/components/Badge';
 import { Icon } from '@/components/Icon';
 import { Link } from '@/components/Link';
 import { MDXContent } from '@/components/MDXContent';
 import { PostPagination } from '@/components/PostPagination';
 import { Separator } from '@/components/Separator';
+import { Tag } from '@/components/Tag';
 import { Toc } from '@/components/Toc';
 import { formatDate } from '@/utils/date';
 import { getAdjacentPosts, getAllPosts, getPostAuthors, getPostById } from '@/utils/posts';
@@ -66,12 +66,7 @@ export default async function Post({
         )} */}
         <div className='mt-5 flex flex-col gap-2'>
           <div className='flex flex-wrap gap-2 text-sm'>
-            {post.tags?.map(tag => (
-              <Badge variant='secondary' size='sm' key={tag}>
-                <Icon className='i-lucide-hash' />
-                {tag}
-              </Badge>
-            ))}
+            {post.tags?.map(tag => <Tag key={tag} name={tag} />)}
           </div>
           <h1 className='text-4xl font-medium leading-tight'>{post.title}</h1>
           <div className='flex flex-wrap items-center gap-2 text-sm text-muted-fg'>

@@ -4,9 +4,9 @@ import NextLink from 'next/link';
 import { formatDate } from '@/utils/date';
 import { getPostAuthors } from '@/utils/posts';
 import { Avatar } from './Avatar';
-import { Badge } from './Badge';
 import { Icon } from './Icon';
 import { Separator } from './Separator';
+import { Tag } from './Tag';
 
 export interface PostCardProps {
   post: Blog;
@@ -28,12 +28,7 @@ export const PostCard = async ({
             <h3 className='text-lg font-medium'>{post.title}</h3>
             <p className='pb-1 text-sm text-muted-fg'>{post.description}</p>
             <div className='flex flex-wrap gap-2 pb-1'>
-              {post.tags?.map(tag => (
-                <Badge variant='secondary' size='sm' key={tag}>
-                  <Icon className='i-lucide-hash' />
-                  {tag}
-                </Badge>
-              ))}
+              {post.tags?.map(tag => <Tag key={tag} name={tag} />)}
             </div>
             <div className='flex flex-wrap items-center gap-2 text-xs text-muted-fg'>
               {post.authors.length !== 0 && (
