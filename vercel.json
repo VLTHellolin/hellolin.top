@@ -1,3 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "^(?!hellolin\\.top$).*"
+        }
+      ],
+      "destination": "https://hellolin.top/$1",
+      "permanent": true
+    }
+  ]
 }
