@@ -52,12 +52,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ThemeProvider>
-          <div className='mx-auto h-screen max-w-4xl flex flex-col gap-8 px-2 md:px-4'>
+          <div className='h-fit min-h-screen flex flex-col gap-6'>
             <Header />
-            <main className='grow'>
+            <main className='mx-auto max-w-4xl flex grow flex-col gap-8 px-2'>
               {children}
+              <Footer />
             </main>
-            <Footer />
           </div>
         </ThemeProvider>
       </body>

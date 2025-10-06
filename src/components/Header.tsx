@@ -11,7 +11,7 @@ const navLinks = [
 export const Header = () => {
   return (
     <header className='sticky top-0 z-100 bg-bg/60 backdrop-blur-10px backdrop-saturate-180'>
-      <div className='flex items-center justify-between gap-4 pb-2 pt-4'>
+      <div className='mx-auto max-w-4xl flex items-center justify-between gap-4 px-2 pb-2 pt-4'>
         <nav className='flex items-center gap-5 text-sm'>
           <Link href='/' className='hidden shrink-0 items-center justify-center sm:flex'>
             <span className='h-full translate-y--1px text-lg font-medium'>
