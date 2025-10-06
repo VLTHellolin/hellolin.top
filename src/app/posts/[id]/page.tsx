@@ -35,6 +35,35 @@ export const generateMetadata = async ({
     description: post.description,
     keywords: post.tags,
     publisher: post.authors.join(' '),
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `https://hellolin.top${post.permalink}`,
+      siteName: 'hellolin.top',
+      type: 'article',
+      publishedTime: new Date(post.date).toISOString(),
+      authors: post.authors.join(' '),
+      tags: post.tags,
+      ...post.image && {
+        images: [
+          {
+            url: post.image.src,
+            alt: post.title,
+            width: 1200,
+            height: 630,
+          },
+        ],
+      },
+    },
+    twitter: {
+      title: post.title,
+      description: post.description,
+      creator: post.authors.join(' '),
+      card: 'summary_large_image',
+      ...post.image && {
+        images: [post.image.src],
+      },
+    },
   };
 };
 

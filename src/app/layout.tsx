@@ -9,6 +9,7 @@ import '@unocss/reset/tailwind.css';
 import '@/styles/index.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hellolin.top'),
   generator: `Next.js v${process.env.NEXT_VERSION}`,
   title: {
     default: 'hellolin.top',
@@ -23,11 +24,16 @@ export const metadata: Metadata = {
       'application/rss+xml': 'https://hellolin.top/rss.xml',
     },
   },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'hellolin.top',
     description: 'A full-stack developer, competitive programmer and high-school student, passionate about open-source development.',
     url: 'https://hellolin.top',
     siteName: 'hellolin.top',
+    type: 'website',
     images: [
       {
         url: 'https://hellolin.top/og.png',
@@ -35,6 +41,13 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
+  },
+  twitter: {
+    title: 'hellolin.top',
+    description: 'A full-stack developer, competitive programmer and high-school student, passionate about open-source development.',
+    creator: 'hellolin',
+    card: 'summary_large_image',
+    images: ['/og.png'],
   },
 };
 
