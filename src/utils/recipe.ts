@@ -8,8 +8,8 @@ export type RecipeIngredient<T extends Recipe> = {
   [V in keyof T]?: UnderscoreToBoolean<keyof T[V]> | null;
 };
 
-export type BakeIngredient<T> =
-  T extends (props: infer P) => string
+export type BakeIngredient<T>
+  = T extends (props: infer P) => string
     ? Omit<P, 'className'>
     : never;
 
