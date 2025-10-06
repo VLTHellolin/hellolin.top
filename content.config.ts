@@ -17,7 +17,7 @@ const imageTransformer = <T extends Record<string, any>>(data: T) => {
 
 const blog = defineCollection({
   name: 'Blog',
-  pattern: 'posts/**/*.md',
+  pattern: 'posts/**/*.mdx',
   schema: s.object({
     title: s.string(),
     date: s.isodate(),

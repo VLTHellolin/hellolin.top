@@ -1,8 +1,13 @@
 import type React from 'react';
 import * as reactRuntime from 'react/jsx-runtime';
+import { Callout } from './Callout';
+import { Link } from './Link';
+import { Separator } from './Separator';
 
 const sharedComponents = {
-  // todo
+  a: Link,
+  hr: Separator,
+  Callout,
 };
 
 const getMDXComponent = (code: string) => {

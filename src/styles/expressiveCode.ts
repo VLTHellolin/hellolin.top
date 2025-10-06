@@ -5,7 +5,6 @@ export const styleOverrides: StyleOverrides = {
   codeFontFamily: 'var(--font-mono)',
 
   borderColor: 'rgb(var(--muted-border))',
-  // codeBackground: 'rgb(var(--muted-bg))',
   lineNumbers: {
     foreground: 'rgb(var(--muted-fg))',
   },
@@ -20,7 +19,6 @@ export const styleOverrides: StyleOverrides = {
     editorTabBarBackground: 'transparent',
     editorTabBarBorderBottomColor: 'transparent',
 
-    terminalBackground: 'rgb(var(--muted-bg))',
     terminalTitlebarForeground: 'rgb(var(--muted-fg))',
     terminalTitlebarBackground: 'transparent',
     terminalTitlebarBorderBottomColor: 'transparent',
