@@ -10,7 +10,7 @@ catalogs:
     '@hellolin-eslint/unocss-config': ^1.2.0
     '@hellolin/eslint-config': ^1.2.0
     commitlint: ^19.8.1
-    eslint: ^9.36.0
+    eslint: ^9.37.0
     execa: ^9.6.0
     husky: ^9.1.7
     lint-staged: ^16.2.3
@@ -19,14 +19,14 @@ catalogs:
     '@expressive-code/plugin-collapsible-sections': ^0.41.3
     '@expressive-code/plugin-line-numbers': ^0.41.3
     '@iconify-json/lucide': ^1.2.68
-    '@iconify-json/simple-icons': ^1.2.53
+    '@iconify-json/simple-icons': ^1.2.54
     '@unocss/postcss': ^66.5.2
     '@unocss/preset-icons': ^66.5.2
     '@unocss/preset-wind3': ^66.5.2
     '@unocss/reset': ^66.5.2
     clsx: ^2.1.1
     es-toolkit: ^1.39.10
-    katex: ^0.16.22
+    katex: ^0.16.23
     next-themes: ^0.4.6
     postcss: ^8.5.6
     postcss-nesting: ^13.0.2
