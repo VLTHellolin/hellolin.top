@@ -54,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ThemeProvider>
           <div className='h-fit min-h-screen flex flex-col gap-6'>
             <Header />
-            <main className='mx-auto max-w-4xl flex grow flex-col gap-8 px-2'>
+            <main className='mx-auto max-w-4xl w-full flex grow flex-col gap-8 px-2'>
               {children}
               <Footer />
             </main>
