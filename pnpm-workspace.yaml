@@ -1,5 +1,7 @@
 catalogs:
   backend:
+    '@vercel/analytics': ^1.5.0
+    '@vercel/speed-insights': ^1.2.0
     babel-plugin-react-compiler: ^19.1.0-rc.3
     feed: ^5.1.0
     next: ^15.5.4
@@ -46,7 +48,4 @@ catalogs:
     '@types/node': ^22.18.8
     '@types/react': ^19.2.0
     '@types/react-dom': ^19.2.0
-    # `@typescript-eslint/parser` doesn't support TS 5.9 yet.
-    # https://github.com/eslint-stylistic/eslint-stylistic/issues/915
-    # typescript: ^5.9.2
     typescript: 5.8.3

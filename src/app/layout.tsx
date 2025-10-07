@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import type React from 'react';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from 'next-themes';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
@@ -73,6 +75,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </main>
           </div>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

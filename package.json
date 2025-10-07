@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@unocss/reset": "catalog:frontend",
+    "@vercel/analytics": "catalog:backend",
+    "@vercel/speed-insights": "catalog:backend",
     "clsx": "catalog:frontend",
     "es-toolkit": "catalog:frontend",
     "feed": "catalog:backend",
