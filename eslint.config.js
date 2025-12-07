@@ -1,4 +1,4 @@
-import defineConfig from '@hellolin/eslint-config';
+import defineConfig from '@hellolin-eslint/config';
 
 export default defineConfig({
   javascript: {
