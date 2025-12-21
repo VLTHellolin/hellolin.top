@@ -24,7 +24,7 @@
     "es-toolkit": "catalog:frontend",
     "feed": "catalog:backend",
     "katex": "catalog:frontend",
-    "next": "catalog:backend",
+    "next": "15.5.8",
     "next-themes": "catalog:frontend",
     "radix-ui": "catalog:frontend",
     "react": "catalog:frontend",
