@@ -2,7 +2,7 @@
   "name": "hellolin.top",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.26.1",
   "license": "AGPL-3.0-only",
   "scripts": {
     "prepare": "husky",
