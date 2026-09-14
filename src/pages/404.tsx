@@ -3,5 +3,3 @@ export default async function Home() {
     <div>test</div>
   );
 }
-
-export const getConfig = async () => ({ render: 'static' });

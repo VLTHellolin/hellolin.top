@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react';
 import mdx from 'fumadocs-mdx/vite';
-import unocss from 'unocss/vite';
+import icons from 'unplugin-icons/vite';
 import { defineConfig } from 'waku/config';
 
 export default defineConfig({
@@ -20,8 +20,11 @@ export default defineConfig({
     },
     plugins: [
       mdx(),
-      react(),
-      unocss(),
+      react({ compiler: true }),
+      icons({
+        compiler: 'jsx',
+        jsx: 'react',
+      }),
     ],
   },
 });

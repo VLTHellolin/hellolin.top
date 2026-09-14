@@ -24,7 +24,8 @@
       "./worker-configuration.d.ts",
       "node",
       "vite",
-      "vite/client"
+      "vite/client",
+      "unplugin-icons/types/react"
     ],
     "allowImportingTsExtensions": true,
     "strict": true,

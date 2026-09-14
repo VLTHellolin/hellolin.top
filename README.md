@@ -8,7 +8,7 @@ That said, the code is licensed under an open source license (see below), thus y
 
 ## Usage
 
-``` shell
+```shell
 $ pnpm install
 $ pnpm run preview
 ```

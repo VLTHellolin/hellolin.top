@@ -17,9 +17,8 @@ body {
   color-scheme: dark;
 }
 
-::selection,
-::-moz-selection {
-  background: var(--gray-a5);
+::selection {
+  background-color: var(--gray-a5);
 }
 
 * {

@@ -1,0 +1,22 @@
+.button {
+  user-select: none;
+  cursor: pointer;
+}
+
+html:global(.light) {
+  .light-icon {
+    display: inline;
+  }
+  .dark-icon {
+    display: none;
+  }
+}
+
+html:global(.dark) {
+  .light-icon {
+    display: none;
+  }
+  .dark-icon {
+    display: inline;
+  }
+}
